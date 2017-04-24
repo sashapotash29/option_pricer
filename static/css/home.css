@@ -1,26 +1,63 @@
+body{
+	background-color: #CDE7B0;
+	height:100vh;
+	font-family: sans-serif;
+
+}
+
+
+
 .topPortion{
-	background-color: lightblue;
+	background-color: #7286A0;
 	text-align: center;
 	margin:0;
 	padding:0;
+	border-bottom: 2px solid #536275;
 
 
 }
 
-.col{
-	margin:0;
-	padding:0;
-	background-color: lightblue;
+.topSpace{
+	/*height:100%;*/
 
 }
+
 
 .title{
-
+	font-size:6vh;
+	margin:0;
+	padding:0;
+	text-decoration: underline;
 }
 
 
 .explanation{
-
-
 	
+	font-size: 2vh;
+	margin:0;
+	padding:0;
+	
+}
+
+
+.middlePortion{
+	height: 90vh;
+	margin:0;
+	padding:0;
+}
+
+.mainSpace{
+	background-color:white;
+	height:100%;
+	margin:0;
+	padding:0;
+
+}
+
+.mainSide{
+	background-color:#A8BE91;
+	margin:0;
+	padding:0;
+	height:100%;
+
 }
