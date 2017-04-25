@@ -3,8 +3,17 @@ body{
 	height:100vh;
 	font-family: sans-serif;
 
+
 }
 
+.row .col {
+	padding:0;
+}
+
+ul:not(.browser-default) {
+    padding-left: 3px;
+    list-style-type: square;
+}
 
 
 .topPortion{
@@ -61,3 +70,85 @@ body{
 	height:100%;
 
 }
+
+
+
+.formSpace{
+	margin:0;
+	padding:0;
+
+}
+
+
+.formSideBar{
+	border: 1px solid black;
+	margin:0;
+	padding:0;
+	padding-left:0;
+	padding-right:0;
+	background-color: lightgrey;
+
+}
+
+.formulaImage{
+	border: 1px solid black;
+	height:100%;
+	width:100%;
+	margin:auto;
+	padding:0;
+	
+}
+
+.informationList li{
+	font-size: 3vh;
+	list-style-type: square;
+}
+
+.formInputArea{
+	border: 1px solid black;
+	margin-left: 1px;
+	padding:0;	
+
+}
+
+
+.rowForm{
+	padding:0;
+	margin:0;
+	display: flex;
+}
+
+.input-field{
+
+	margin:0;
+	padding:0;
+}
+
+.nameAndInput{
+
+	margin:auto;
+}
+
+input[type=text]{
+	font-size:3vh;
+	height:4vh;
+	margin:0;
+	padding:0;
+}
+
+.inputName{
+	font-size:3vh;
+	font-weight: bold;
+}
+
+
+.tInput{
+	font-size: 2vh;
+	width: 40%;
+
+}
+
+.row .col.s6 {
+	width:40%;
+}
+
