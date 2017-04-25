@@ -26,18 +26,18 @@
 			<div class="col s10 mainSpace">
 				<div class="row formSpace">
 					<div class="col s5 formSideBar">
-						<p class="infoHeader">Info:</p>
+						<p class="mainSpaceHeader">Info:</p>
 						<p class="bScholesHeader"> Black-Scholes Formula</p>
 						<image class="formulaImage" src="../static/images/blackscholes.png" width=100% height=100%>
 						<ul class="informationList">
-							<li> Test</li>
-							<li> Test</li>
-							<li> Test</li>
-							<li> Test</li>
+							<li class="bsListItem"> Created by: Fischer Black, Myron Scholes and Robert Merton</li>
+							<li class="bsListItem"> Introduced in: 1973</li>
+							<li class="bsListItem"> Test</li>
+							<li class="bsListItem"> Information Brought to you by: <a target="_blank"href="http://www.investopedia.com/university/options-pricing/black-scholes-model.asp"> Investopedia</a></li>
 						</ul>
 					</div>
 					<div class="col s7 formInputArea">
-						<span>Please input information below:</span>
+						<p class="mainSpaceHeader">Please input information below:</span>
 						<form>
 							<div class="row rowForm">
 								<div class="col s6 nameAndInput">
@@ -56,12 +56,12 @@
 	          					</div>
 	          					<div class="col s6 nameAndInput">
 	          						<span class="inputName"> Risk-Free Interest Rate </span>
-	          						<input placeholder="Risk-Free Interest Rate" id="first_name" type="text" class="inputClass" required>
+	          						<input placeholder="Risk-Free Interest Rate" id="rfRateInput" type="text" class="inputClass" required>
 	          					</div>
 	      					</div>
 	      					<div class="row rowForm">
 								<div class="col s12 submitButtonRow">
-									<input  class="submitButton" type="submit" value="Price!">
+									<input  id ="priceButton" class="submitButton" type="submit" value="Price!">
 	          					</div>
 	      					</div>
       					</form>

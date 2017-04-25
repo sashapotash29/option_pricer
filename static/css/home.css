@@ -10,8 +10,8 @@ body{
 	padding:0;
 }
 
-ul:not(.browser-default) {
-    padding-left: 3px;
+ul:not(.browser-default) li{
+    padding:0;
     list-style-type: square;
 }
 
@@ -45,6 +45,7 @@ ul:not(.browser-default) {
 	font-size: 2vh;
 	margin:0;
 	padding:0;
+	font-family: cursive;
 	
 }
 
@@ -60,6 +61,7 @@ ul:not(.browser-default) {
 	height:100%;
 	margin:0;
 	padding:0;
+	border:0.4px solid lightyellow;
 
 }
 
@@ -90,12 +92,13 @@ ul:not(.browser-default) {
 
 }
 
-.infoHeader{
+.mainSpaceHeader{
 	margin:0;
 	margin-left:1px;
 	padding:0;
 	text-decoration: underline;
 	color:darkblue;
+	text-align: center;
 
 }
 
@@ -118,9 +121,23 @@ ul:not(.browser-default) {
 	
 }
 
+.informationList{
+	margin:0;
+	padding:0;
+	margin-left:10px;
+
+
+}
+
 .informationList li{
-	font-size: 3vh;
-	list-style-type: square;
+	font-size: 2vh;
+	
+}
+
+.bsListItem{
+	font-size: 1vh;
+
+
 }
 
 .formInputArea{
