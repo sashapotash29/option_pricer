@@ -26,7 +26,8 @@
 			<div class="col s10 mainSpace">
 				<div class="row formSpace">
 					<div class="col s5 formSideBar">
-						<span>Info:</span>
+						<p class="infoHeader">Info:</p>
+						<p class="bScholesHeader"> Black-Scholes Formula</p>
 						<image class="formulaImage" src="../static/images/blackscholes.png" width=100% height=100%>
 						<ul class="informationList">
 							<li> Test</li>
@@ -37,33 +38,33 @@
 					</div>
 					<div class="col s7 formInputArea">
 						<span>Please input information below:</span>
-						<div class="row rowForm">
-							<div class="col s6 nameAndInput">
-							<span class="inputName"> Stock Ticker </span>
-          						<input placeholder="Stock Ticker" id="tickerInput" type="text" class="inputClass" required>
-          					</div>
-          					<div class="col s6 nameAndInput">
-          						<span class="inputName"> Maturity </span>
-          						<input placeholder="Maturity (in years)" id="maturityInput" type="text" class="inputClass" required>
-          					</div>
-      					</div>
-      					<div class="row rowForm">
-							<div class="col s6 nameAndInput">
-								<span class="inputName"> Strike Price </span>
-          						<input placeholder="Stock Ticker" id="strikeInput" type="text" class="inputClass" required>
-          					</div>
-          					<div class="col s6 nameAndInput">
-          						<input placeholder="Maturity (in years)" id="first_name" type="text" class="inputClass" required>
-          					</div>
-      					</div>
-      					<div class="row rowForm">
-							<div class="col s6 nameAndInput">
-          						<input placeholder="Stock Ticker" id="tickerInput" type="text" class="inputClass" required>
-          					</div>
-          					<div class="col s6 nameAndInput">
-          						<input placeholder="Maturity (in years)" id="first_name" type="text" class="inputClass" required>
-          					</div>
-      					</div>
+						<form>
+							<div class="row rowForm">
+								<div class="col s6 nameAndInput">
+								<span class="inputName"> Stock Ticker </span>
+	          						<input placeholder="Stock Ticker" id="tickerInput" type="text" class="inputClass" required>
+	          					</div>
+	          					<div class="col s6 nameAndInput">
+	          						<span class="inputName"> Maturity </span>
+	          						<input placeholder="Maturity (in years)" id="maturityInput" type="text" class="inputClass" required>
+	          					</div>
+	      					</div>
+	      					<div class="row rowForm">
+								<div class="col s6 nameAndInput">
+									<span class="inputName"> Strike Price </span>
+	          						<input placeholder="Strike Price" id="strikeInput" type="text" class="inputClass" required>
+	          					</div>
+	          					<div class="col s6 nameAndInput">
+	          						<span class="inputName"> Risk-Free Interest Rate </span>
+	          						<input placeholder="Risk-Free Interest Rate" id="first_name" type="text" class="inputClass" required>
+	          					</div>
+	      					</div>
+	      					<div class="row rowForm">
+								<div class="col s12 submitButtonRow">
+									<input  class="submitButton" type="submit" value="Price!">
+	          					</div>
+	      					</div>
+      					</form>
 					</div>
 				</div>
 			</div>
