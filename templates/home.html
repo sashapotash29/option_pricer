@@ -42,7 +42,10 @@
 							<div class="row rowForm">
 								<div class="col s6 nameAndInput">
 								<span class="inputName"> Stock Ticker </span>
-	          						<input placeholder="Stock Ticker" id="tickerInput" type="text" class="inputClass" required>
+									<div class="stockChoiceArea">
+		          						<input placeholder="Stock Ticker" id="tickerInput" type="text" class="inputClass" required>
+		          						<button id="searchStockInputButton"> Search </button>
+	          						</div>
 	          					</div>
 	          					<div class="col s6 nameAndInput">
 	          						<span class="inputName"> Maturity </span>
@@ -51,6 +54,10 @@
 	      					</div>
 	      					<div class="row rowForm">
 								<div class="col s6 nameAndInput">
+									<ul class="searchResultList" id="searchResultList">
+	<!-- 									<li class="stockOptionLi"> <button class="stockButton">Stock Result #1 </button></li>
+										<li class="stockOptionLi"> <button class="stockButton">Stock Result #2 </button> </li> -->
+									</ul>
 									<span class="inputName"> Strike Price </span>
 	          						<input placeholder="Strike Price" id="strikeInput" type="text" class="inputClass" required>
 	          					</div>
