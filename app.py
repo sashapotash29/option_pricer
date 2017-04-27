@@ -22,13 +22,16 @@ def return_homepage():
 def grab_stock_choices(stockChoice):
 	if type(stockChoice)== str:
 		url = "http://dev.markitondemand.com/MODApis/Api/v2/Lookup/json?input=" + stockChoice
-
 		result = requests.get(url).json()
 		final_product={}
 		final_product['result'] = result
+		print(final_product)
 		return json.dumps(final_product)
 	else:
-		return "invalidDataType"
+		final_product={}
+		final_product['result'] = "invalidDataType"
+		print(final_product)
+		return json.dumps(final_product)
 
 
 

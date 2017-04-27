@@ -82,7 +82,8 @@ var searchStockInputButton = document.getElementById('searchStockInputButton')
 
 searchStockInputButton.addEventListener("click", function(e){
 	e.preventDefault()
-	
+	console.log(e)
+
 	const stockChoice = document.getElementById('tickerInput')
 	if (stockChoice.value == ""){
 		stockChoice.value = ""
@@ -92,9 +93,22 @@ searchStockInputButton.addEventListener("click", function(e){
 		var xhttp = new XMLHttpRequest();
 		xhttp.onreadystatechange = function(){
 			if (this.readyState == 4 && this.status == 200){
-				var data_array = JSON.parse(this.responseText)['result'];
-				console.log(data_array)
-				buildStockUl(data_array)
+				var data_array = JSON.parse(this.responseText);
+				if(data_array['result'].length >0){
+					buildStockUl(data_array['result'])
+				}
+				else{
+					const stockButtonList = document.getElementById('searchResultList');
+					while(stockButtonList.firstChild){
+						stockButtonList.removeChild(stockButtonList.firstChild);
+					}
+					var nothingFoundLi = document.createElement('li')
+					nothingFoundLi.setAttribute('class', 'stockOptionLi')
+					nothingFoundLi.innerHTML = "Sorry, nothing was found."
+					stockButtonList.appendChild(nothingFoundLi)
+					stockButtonList.style.display = "block";
+				}
+				
 				
 
 			}
