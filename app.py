@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 import requests
 import json
 
@@ -37,7 +37,25 @@ def grab_stock_choices(stockChoice):
 @app.route("/price", methods=['POST'])
 def price():
 	# GRAB FROM REQUEST OBJECT AND FIND QUERY DICT
-	request = request
+	client_info = json.loads(request.get_data().decode())
+	for key, value in client_info.items():
+		if key == "strikeInput":
+			value = float(value)
+			print(value)
+			print(type(value))
+		elif key == "maturityInput":
+			value = float(value)
+			print(value)
+			print(type(value))
+		elif key == "rfRateInput":
+			value = float(value)
+			print(value)
+			print(type(value))
+	
+
+
+
+
 
 
 

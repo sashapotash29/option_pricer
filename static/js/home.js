@@ -5,7 +5,6 @@ var check_sub_valid = function(){
 	const strikeInput = document.getElementById('strikeInput').value
 	const maturityInput = document.getElementById('maturityInput').value
 	const rfRateInput = document.getElementById('rfRateInput').value
-	console.log(stockChoice, strikeInput, maturityInput, rfRateInput)
 	var checking_array = [stockChoice,strikeInput,maturityInput,rfRateInput]
 	for(var i =0; i < checking_array.length; i++){
 		if (checking_array[i] == ""){
@@ -125,6 +124,17 @@ searchStockInputButton.addEventListener("click", function(e){
 
 
 
+var send_to_price = function(information_obj){
+	var url = "/price";
+	var params = JSON.stringify(information_obj);
+	var xhr = new XMLHttpRequest();
+	xhr.open("POST", url, true);
+	xhr.send(params);
+
+
+
+};
+
 
 
 var priceButton = document.getElementById('priceButton')
@@ -135,16 +145,41 @@ priceButton.addEventListener("click", function(e){
 	var answer = check_sub_valid()
 
 	if(answer==true){
-		console.log("ready to go")
-		const stockChoice = document.getElementById('tickerInput').value
-		const strikeInput = document.getElementById('strikeInput').value
-		const maturityInput = document.getElementById('maturityInput').value
-		const rfRateInput = document.getElementById('rfRateInput').value
-		var information_obj = {"stockChoice": stockChoice, "strikeInput":strikeInput,
-			'maturityInput': maturityInput, 'rfRateInput':rfRateInput}
+		var errorMessage = document.getElementById('errorMessage')
+		if(errorMessage){
+			errorMessage.style.display = "none"
+			console.log("ready to go w/ errorMessage")
+			const stockChoice = document.getElementById('tickerInput').value
+			const strikeInput = document.getElementById('strikeInput').value
+			const maturityInput = document.getElementById('maturityInput').value
+			const rfRateInput = document.getElementById('rfRateInput').value
+			var information_obj = {"stockChoice": stockChoice, "strikeInput":strikeInput,
+				'maturityInput': maturityInput, 'rfRateInput':rfRateInput}
+			console.log(information_obj)
+			send_to_price(information_obj)
+
+		}
+		else{
+			console.log("ready to go")
+			const stockChoice = document.getElementById('tickerInput').value
+			const strikeInput = document.getElementById('strikeInput').value
+			const maturityInput = document.getElementById('maturityInput').value
+			const rfRateInput = document.getElementById('rfRateInput').value
+			var information_obj = {"stockChoice": stockChoice, "strikeInput":strikeInput,
+				'maturityInput': maturityInput, 'rfRateInput':rfRateInput}
+			console.log(information_obj)
+			send_to_price(information_obj)
+		}
 	}
 	else{
 		console.log("NOT ready to go")
+		var submitArea = document.getElementById('submitButtonRow')
+		var errorMessage = document.createElement('p')
+		errorMessage.setAttribute('class', 'errorMessage')
+		errorMessage.setAttribute('id', 'errorMessage')
+		errorMessage.innerHTML = "You seem to be missing infromation. Fill out all fields."
+		submitArea.appendChild(errorMessage)
+
 	}
 
 
