@@ -34,6 +34,12 @@ def grab_stock_choices(stockChoice):
 		return json.dumps(final_product)
 
 
+@app.route("/price", methods=['POST'])
+def price():
+	# GRAB FROM REQUEST OBJECT AND FIND QUERY DICT
+	request = request
+
+
 
 if __name__ == ("__main__"):
 	app.run(debug=True, port=1234)
