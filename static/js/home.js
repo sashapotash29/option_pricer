@@ -128,6 +128,11 @@ var send_to_price = function(information_obj){
 	var url = "/price";
 	var params = JSON.stringify(information_obj);
 	var xhr = new XMLHttpRequest();
+	xhr.onreadystatechange = function() {
+	    if (xhr.readyState == XMLHttpRequest.DONE) {
+	        alert(xhr.responseText);
+	    }
+	}
 	xhr.open("POST", url, true);
 	xhr.send(params);
 

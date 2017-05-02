@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request
 import requests
 import json
+from tools import price_option
 
 
 
@@ -51,6 +52,10 @@ def price():
 			value = float(value)
 			print(value)
 			print(type(value))
+	option_price = round(price_option(client_info),2)
+	print(option_price)
+	
+	return str(option_price)
 	
 
 
