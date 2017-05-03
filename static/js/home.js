@@ -123,7 +123,7 @@ searchStockInputButton.addEventListener("click", function(e){
 });
 
 
-
+// SEND TO PRICE AND WHAT TO DO WITH RESULTS!
 var send_to_price = function(information_obj){
 	var url = "/price";
 	var params = JSON.stringify(information_obj);

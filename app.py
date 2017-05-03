@@ -42,20 +42,15 @@ def price():
 	for key, value in client_info.items():
 		if key == "strikeInput":
 			value = float(value)
-			print(value)
-			print(type(value))
 		elif key == "maturityInput":
 			value = float(value)
-			print(value)
-			print(type(value))
 		elif key == "rfRateInput":
 			value = float(value)
-			print(value)
-			print(type(value))
 	option_price = round(price_option(client_info),2)
+	client_info['option_price'] = option_price
 	print(option_price)
 	
-	return str(option_price)
+	return json.dumps(client_info)
 	
 
 

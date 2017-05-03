@@ -5,22 +5,6 @@ import io
 from math import *
 
 
-def erfcc(value):
-    """Complementary error function."""
-    z = abs(value)
-    t = 1. / (1. + 0.5*z)
-    r = t * exp(-z*z-1.26551223+t*(1.00002368+t*(.37409196+
-        t*(.09678418+t*(-.18628806+t*(.27886807+
-        t*(-1.13520398+t*(1.48851587+t*(-.82215223+
-        t*.17087277)))))))))
-    if (value >= 0.):
-        return r
-    else:
-        return 2. - r
-
-def ncdf(value):
-    return 1. - 0.5*erfcc(value/(2**0.5))
-
 
 def phi(value):
     #'Cumulative distribution function for the standard normal distribution'
@@ -83,9 +67,8 @@ def price_option(variable_object):
 	normal_dist_d2 = phi(d2)
 	print('normal_dist_d1', normal_dist_d1)
 	print('normal_dist_d2', normal_dist_d2)
-
 	call_left_value = current_price*normal_dist_d1
-	call_right_value = normal_dist_d2*strike_price
+	call_right_value = normal_dist_d2*strike_price*(e**(-(rf_rate*maturity)))
 	print("weird part", (e**(-(rf_rate*maturity))))
 	print('call_left_value', call_left_value)
 	print('call_right_value', call_right_value)
